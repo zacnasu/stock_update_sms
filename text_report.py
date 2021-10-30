@@ -27,9 +27,10 @@ def send_text_info():
     file.close()
     client = Client(config_data['twilio_account'], config_data['twilio_token'])
     text = get_text_info()
-    message = client.messages.create(to=config_data['to_number'],
-                                     from_=config_data['from_number'],
-                                     body=text)
+    for number in config_data['to_number']:
+        message = client.messages.create(to=number,
+                                        from_=config_data['from_number'],
+                                        body=text)
 
 def setup_daily_text():
     while True:
@@ -37,7 +38,7 @@ def setup_daily_text():
         time.sleep(1)
 
 
-schedule.every().day.at("13:30").do(send_text_info)
+schedule.every().day.at("18:00").do(send_text_info)
 
 if __name__ == "__main__":
     setup_daily_text()

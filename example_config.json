@@ -1,0 +1,19 @@
+
+{
+    "stocks": [{
+        "symbol": "AMZN",
+        "share_count": 5
+    },
+    {
+        "symbol": "MSFT",
+        "share_count": 64
+    }
+    ],
+    "url": "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-summary",
+    "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+    "x-rapidapi-key": "",
+    "twilio_account": "",
+    "twilio_token": "",
+    "to_number": ["", ""],
+    "from_number": ""
+}

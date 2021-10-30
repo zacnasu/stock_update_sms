@@ -43,6 +43,5 @@ def get_portfolio_data():
         return_data['open_total'] += ssd['open'] * stock['share_count']
         return_data['close_total'] += ssd['close'] * stock['share_count']
         return_data['stocks'][stock['symbol']] = ssd
-
     
     return return_data
